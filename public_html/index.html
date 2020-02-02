@@ -1,9 +1,71 @@
 <html>
     <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Hammersmith+One&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/f6781132f5.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="../src/stylesheet.css">
+        <title>Botanist - The Plant Learning Application</title>
     </head>
     <body>
-        <h1>Project Name</h1>
+        <audio id="ambience">
+            <source src="./assets/audio/ambience.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <button class="ambient-btn" id="ambient-toggle">
+            Ambient Music <i class="pl-2 fas fa-play"></i>
+        </button>
+        <div class="container-fluid nav-top">
+            <div class="row py-3 nav-top-row">
+                <div class="col-sm-4 col-lg-1 my-sm-2">
+                    <img src="./assets/images/logo.png" class="site-logo img-fluid">
+                </div>
+                <div class="col-sm-8 col-lg-8 my-sm-2 nav-top-title">
+                    <a class="site-link" href="index.html">
+                        <h1>
+                            Botanist
+                        </h1>
+                    </a>
+                </div>
+                <div class="col-sm-12 col-lg-3 my-sm-2 justify-right nav-top-author nav-top-title">
+                    <a href="https://www.behance.net/georgecadwall" class="site-link">
+                        Made by George Cadwallader
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container info-con my-5">
+            <div class="row">
+                <div class="col-sm-12 info-con-section p-3">
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <h2 class="audio-content-1">Botanist - an expert in or student of the scientific study of plants.</h2>
+                        </div>
+                        <div class="col-sm-1">
+                            <button class="audio-btn" data-audio="1">
+                                <i class="fas fa-volume-up"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row my-4">
+                        <div class="col-sm-9">
+                            <p class="audio-content-1">
+                                Start your plant learning journey by clicking the 'Start' button below.
+                                Once started click and drag your mouse to move up the plant, click on the information icons to learn more about the part of the plant you are currently at.
+                                <br><br>Use the speaker icons to have an audio description of the information section you are viewing.
+                                The button to toggle the ambient music is at the bottom right of the screen.
+                            </p>
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="./assets/images/plant.png" class="img-fluid">
+                        </div>
+                    </div>
+                    <button id="start-btn" class="btn btn-lg btn-link">Start</button>
+                </div>
+            </div>
+        </div>
         <script src="../dist/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 </html>

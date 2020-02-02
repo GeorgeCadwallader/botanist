@@ -5,4 +5,117 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    font-family: 'Hammersmith One', 'sans-serif' !important;
+    height: 2000px;
+    overflow: hidden;
+}
+
+.nav-top {
+    background-color: #51a33e;
+    z-index: 999;
+}
+
+.nav-top-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-top-row {
+    transition: padding .25s ease-in-out;
+}
+
+.site-link {
+    color: #fff;
+    text-decoration: none;
+    transition: color .25s ease-in-out;
+}
+
+.site-link h1 {
+    transition: font-size .25s ease-in-out;
+}
+
+@media only screen and (max-width: 992px) {
+    .site-link h1 {
+        font-size: 65px;
+    }
+    
+    .nav-top-author {
+        text-align: right;
+        font-size: 20px;
+    }
+}
+
+.site-link:hover {
+    color: #eaeaea;
+    text-decoration: none;
+}
+
+.site-logo {
+    animation: rotation 10s infinite linear;
+    transition: max-width .25s ease-in-out;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
+.info-con {
+    background-color: #eaeaea;
+}
+
+.info-con-section {
+    color: #51a33e;
+}
+
+.btn-link {
+    background-color: #51a33e;
+    color: #fff;
+    font-size: 18px;
+}
+
+.btn-link:hover, .btn-line:active {
+    background-color: #478f36;
+    color: #fff;
+    text-decoration: none;
+}
+
+.audio-btn {
+    padding: 8px;
+    font-size: 30px;
+    color: #fff;
+    background-color: #51a33e;
+    border-radius: 16px;
+    border: none;
+}
+
+.audio-btn:hover {
+    background-color: #478f36;
+    color: #fff;
+    cursor: pointer;
+}
+
+.ambient-btn {
+    padding: 8px;
+    font-size: 22px;
+    color: #fff;
+    background-color: #51a33e;
+    border: none;
+}
+
+.ambient-btn:hover {
+    background-color: #478f36;
+    color: #fff;
+    cursor: pointer;
+}
+
+#ambient-toggle {
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
