@@ -1,9 +1,9 @@
 {
-  "name": "avatar-creator",
+  "name": "botanist",
   "version": "1.0.0",
-  "description": "Avatar creator for ct6010",
+  "description": "Plant information application",
   "main": "index.js",
-  "repository": "git@github.com:GeorgeCadwallader/avatar-creator.git",
+  "repository": "git@github.com:GeorgeCadwallader/botanist.git",
   "author": "George <georgecadwallader77@gmail.com>",
   "license": "MIT",
   "scripts": {
