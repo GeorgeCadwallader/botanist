@@ -1,6 +1,7 @@
+[logo]: /public_html/assets/images/logo-github.png "Botanist - The plant learning app"
+
 # Botanist
 
-![alt text](https://github.com/GeorgeCadwallader/botanist/tree/master/public_html/assets/images/logo-github.png "Botanist - The plant learning app")
-
+![alt text][logo]
 
 Creative Visualisation application for CT6015
