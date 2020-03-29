@@ -7,7 +7,6 @@ body {
     user-select: none;
     font-family: 'Hammersmith One', 'sans-serif' !important;
     height: 2000px;
-    overflow: hidden;
 }
 
 .nav-top {
@@ -67,6 +66,8 @@ body {
 
 .info-con {
     background-color: #eaeaea;
+    margin-top: 150px;
+    margin-bottom: 400px;
 }
 
 .info-con-section {
@@ -106,6 +107,7 @@ body {
     color: #fff;
     background-color: #51a33e;
     border: none;
+    z-index: 999;
 }
 
 .ambient-btn:hover {
@@ -118,4 +120,102 @@ body {
     position: fixed;
     bottom: 0;
     right: 0;
+}
+
+.image-container {
+    padding-left: 0;
+}
+
+.text-item {
+    width: 100%;
+    flex-grow: 1;
+}
+
+.text-item h3 {
+    background-color: #51a33e;
+    color: #fff;
+    padding: 15px;
+    margin: 0;
+}
+
+.text-item p {
+    background-color: #eaeaea;
+    color: #51a33e;
+    padding: 15px;
+}
+
+g circle {
+    transition: fill .2s ease-in-out;
+}
+
+g#nine circle:hover, g#nine text:hover {
+    cursor: pointer;
+}
+
+g#nine circle:hover {
+    fill: #478f36 !important;
+}
+
+g#eight circle:hover, g#eight text:hover {
+    cursor: pointer;
+}
+
+g#eight circle:hover {
+    fill: #478f36 !important;
+}
+
+g#seven circle:hover, g#seven text:hover {
+    cursor: pointer;
+}
+
+g#seven circle:hover {
+    fill: #478f36 !important;
+}
+
+g#six circle:hover, g#six text:hover {
+    cursor: pointer;
+}
+
+g#six circle:hover {
+    fill: #478f36 !important;
+}
+
+g#five circle:hover, g#five text:hover {
+    cursor: pointer;
+}
+
+g#five circle:hover {
+    fill: #478f36 !important;
+}
+
+g#four circle:hover, g#four text:hover {
+    cursor: pointer;
+}
+
+g#four circle:hover {
+    fill: #478f36 !important;
+}
+
+g#three circle:hover, g#three text:hover {
+    cursor: pointer;
+}
+
+g#three circle:hover {
+    fill: #478f36 !important;
+}
+
+g#two circle:hover, g#two text:hover {
+    cursor: pointer;
+}
+
+g#two circle:hover {
+    fill: #478f36 !important;
+}
+
+g#one circle:hover, g#nine text:hover {
+    cursor: pointer;
+}
+
+g#one circle:hover {
+    fill: #478f36 !important;
 }
