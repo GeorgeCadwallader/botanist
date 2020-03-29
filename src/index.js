@@ -8,6 +8,18 @@ $(document).on({
     'mousedown': function(e) {
         clicked = true;
         clickY = e.pageY;
+
+        if ($(e.target).parents('.image-container').length > 0) {
+            var climbing = $('#climbing')[0];
+
+            if (!ambience.paused) {
+                climbing.volume = 0.5;
+            } else {
+                climbing.volume = 0.2;
+            }
+
+            climbing.play();
+        }
     },
     'mouseup': function() {
         clicked = false;
@@ -21,35 +33,6 @@ var updateScrollPos = function(e) {
 }
 
 $(document).ready(function() {
-
-    $(window).scroll(function() {
-        var scrollPos = $(document).scrollTop();
-
-        if (scrollPos > 0) {
-            $('.nav-top').css({
-                'position': 'sticky',
-                'top': '0px'
-            });
-            $('.site-logo').css({
-                'max-width': '55px',
-            });
-            $('h1').css({
-                'font-size': '28px',
-            });
-            $('.nav-top-author').hide();
-        } else {
-            $('.nav-top').css({
-                'position': 'static'
-            });
-            $('.site-logo').css({
-                'max-width': '100%',
-            });
-            $('h1').css({
-                'font-size': '40px',
-            });
-            $('.nav-top-author').show();
-        }
-    });
 
     $('#start-btn').on('click', function() {
         let height = $(document).height();
@@ -95,7 +78,50 @@ $(document).ready(function() {
         swapIcons($(this).children(), 'fa-volume-up', 'fa-pause');
 
         let msg = new SpeechSynthesisUtterance(content.trim());
-        msg.volume = 0.4;
+        msg.volume = 0.5;
         window.speechSynthesis.speak(msg);
+    });
+
+    var highlightText = function(id) {
+        document.querySelector('.text-' + id).scrollIntoView({
+            block: 'start',
+            behavior: 'smooth'
+        });
+    }
+
+    $('g#one').on('click', function() {
+        highlightText(this.id);
+    });
+
+    $('g#two').on('click', function() {
+        highlightText(this.id);
+    });
+
+    $('g#three').on('click', function() {
+        highlightText(this.id);
+    });
+
+    $('g#four').on('click', function() {
+        highlightText(this.id);
+    });
+
+    $('g#five').on('click', function() {
+        highlightText(this.id);
+    });
+
+    $('g#six').on('click', function() {
+        highlightText(this.id);
+    });
+
+    $('g#seven').on('click', function() {
+        highlightText(this.id);
+    });
+
+    $('g#eight').on('click', function() {
+        highlightText(this.id);
+    });
+
+    $('g#nine').on('click', function() {
+        highlightText(this.id);
     });
 });
