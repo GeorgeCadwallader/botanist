@@ -1,38 +1,51 @@
 import $ from 'jQuery';
-
-var clicked = false, clickY;
-$(document).on({
-    'mousemove': function(e) {
-        clicked && updateScrollPos(e);
-    },
-    'mousedown': function(e) {
-        clicked = true;
-        clickY = e.pageY;
-
-        if ($(e.target).parents('.image-container').length > 0) {
-            var climbing = $('#climbing')[0];
-
-            if (!ambience.paused) {
-                climbing.volume = 0.5;
-            } else {
-                climbing.volume = 0.2;
-            }
-
-            climbing.play();
-        }
-    },
-    'mouseup': function() {
-        clicked = false;
-        $('html').css('cursor', 'auto');
-    }
-});
-
-var updateScrollPos = function(e) {
-    $('html').css('cursor', 'grab');
-    $(window).scrollTop($(window).scrollTop() + (clickY - e.pageY));
-}
+import Sortable from 'sortablejs/modular/sortable.complete.esm.js';
 
 $(document).ready(function() {
+
+    var positions = [
+        'Flower',
+        'Main shoot',
+        'Flower buds',
+        'Leaves',
+        'Leaf stalks',
+        'The stem',
+        'Small shoots',
+        'Main root',
+        'The root'
+    ];
+
+    new Sortable(document.getElementById('sortQuiz'), {
+        animation: 150,
+    });
+
+    var changeAlertClass = function(element, type) {
+        if (element.hasClass('alert-' + type)) {
+            return;
+        }
+
+        element.removeClass();
+        element.addClass('alert alert-' + type);
+    }
+
+    $('#check-btn').on('click', function() {
+        let items = $('#sortQuiz');
+        let alert = $('#quizAlert');
+
+        var isCorrect = false;
+
+        items.children().each(function () {
+            if (positions[$(this).index()] !== $(this).text()) {
+                changeAlertClass(alert, 'danger');
+                alert.text('Sorry, you are incorrect. Try again!');
+                return false;
+            }
+
+            changeAlertClass(alert, 'success');
+            alert.text('Well done, you have got all the positions correct!');
+            isCorrect = true;
+        });
+    });
 
     $('#start-btn').on('click', function() {
         let height = $(document).height();
