@@ -64,6 +64,11 @@ body {
     }
 }
 
+.quiz-section {
+    margin-top: 100px;
+    margin-bottom: 250px;
+}
+
 .info-con {
     background-color: #eaeaea;
     margin-top: 150px;

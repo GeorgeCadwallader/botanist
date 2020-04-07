@@ -1,7 +1,68 @@
 import $ from 'jQuery';
 import Sortable from 'sortablejs/modular/sortable.complete.esm.js';
+import Chart from 'chart.js';
 
 $(document).ready(function() {
+
+    var popularChart = new Chart(document.getElementById('popularChart'), {
+        type: 'bar',
+        data: {
+            labels: ['Rice', 'Beans', 'Wheat', 'Sugarcane', 'Maize', 'Soybeans'],
+            datasets: [
+                {
+                    label: 'Most popular plant (million)',
+                    data: [18, 16, 51, 11, 22, 5],
+                    backgroundColor: [
+                        'rgba(81, 163, 62, 1)',
+                        'rgba(81, 163, 62, 1)',
+                        'rgba(81, 163, 62, 1)',
+                        'rgba(81, 163, 62, 1)',
+                        'rgba(81, 163, 62, 1)',
+                        'rgba(81, 163, 62, 1)'
+                    ],
+                    borderColor: [
+                        'rgba(71, 143, 54, 1)',
+                        'rgba(71, 143, 54, 1)',
+                        'rgba(71, 143, 54, 1)',
+                        'rgba(71, 143, 54, 1)',
+                        'rgba(71, 143, 54, 1)',
+                        'rgba(71, 143, 54, 1)',
+                    ],
+                    borderWidth: 1
+                },
+                {
+                    label: 'Sales of plant (billion)',
+                    data: [337, 55, 84, 65, 17, 57],
+                    backgroundColor: [
+                        'rgba(234, 237, 55, 1)',
+                        'rgba(234, 237, 55, 1)',
+                        'rgba(234, 237, 55, 1)',
+                        'rgba(234, 237, 55, 1)',
+                        'rgba(234, 237, 55, 1)',
+                        'rgba(234, 237, 55, 1)'
+                    ],
+                    borderColor: [
+                        'rgba(217, 219, 61, 1)',
+                        'rgba(217, 219, 61, 1)',
+                        'rgba(217, 219, 61, 1)',
+                        'rgba(217, 219, 61, 1)',
+                        'rgba(217, 219, 61, 1)',
+                        'rgba(217, 219, 61, 1)'
+                    ],
+                    borderWidth: 1
+                }
+            ]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
 
     var positions = [
         'Flower',
