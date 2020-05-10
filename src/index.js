@@ -89,6 +89,17 @@ $(document).ready(function() {
         element.addClass('alert alert-' + type);
     }
 
+    $('.font-option').on('click', function () {
+        let fontSize = $(this).data('size');
+
+        $('.font-increase').each(function (i, el) {
+            $(el).css('font-size', 'initial');
+            let currentSize = $(el).css('font-size');
+            
+            $(el).css('font-size', parseInt(currentSize.replace('px', '')) + parseInt(fontSize));
+        });
+    });
+
     $('#check-btn').on('click', function() {
         let items = $('#sortQuiz');
         let alert = $('#quizAlert');

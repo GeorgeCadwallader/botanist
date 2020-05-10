@@ -22,9 +22,11 @@
             <source src="./assets/audio/climbing.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
-        <button class="ambient-btn" id="ambient-toggle">
-            Ambient Music <i class="pl-2 fas fa-play"></i>
-        </button>
+        <div class="fixed-container">
+            <button class="ambient-btn" id="ambient-toggle">
+                Ambient Music <i class="pl-2 fas fa-play"></i>
+            </button>
+        </div>
         <div class="container-fluid nav-top">
             <div class="row py-3 nav-top-row">
                 <div class="col-sm-4 col-lg-1 my-sm-2">
@@ -32,13 +34,13 @@
                 </div>
                 <div class="col-sm-8 col-lg-8 my-sm-2 nav-top-title">
                     <a class="site-link" href="index.html">
-                        <h1>
+                        <h1 class="font-increase">
                             Botanist
                         </h1>
                     </a>
                 </div>
                 <div class="col-sm-12 col-lg-3 my-sm-2 justify-right nav-top-author nav-top-title">
-                    <a href="https://www.behance.net/georgecadwall" class="site-link">
+                    <a href="https://www.behance.net/georgecadwall" class="site-link font-increase">
                         Made by George Cadwallader
                     </a>
                 </div>
@@ -49,7 +51,7 @@
                 <div class="col-sm-12 info-con-section p-3">
                     <div class="row">
                         <div class="col-sm-11">
-                            <h2 class="audio-content-1">Botanist - an expert in or student of the scientific study of plants.</h2>
+                            <h2 class="audio-content-1 font-increase font-weight-bold">Botanist - an expert in or student of the scientific study of plants.</h2>
                         </div>
                         <div class="col-sm-1">
                             <button class="audio-btn" data-audio="1">
@@ -59,13 +61,23 @@
                     </div>
                     <div class="row my-4">
                         <div class="col-sm-9">
-                            <p class="audio-content-1">
+                            <p class="audio-content-1 font-increase">
                                 Start your plant learning journey by clicking the 'Start' button below.
                                 Once started click and drag your mouse to move up the plant, click on the information icons to learn more about the part of the plant you are currently at.
                                 <br><br>Use the speaker icons to have an audio description of the information section you are viewing.
                                 The button to toggle the ambient music is at the bottom right of the screen.
                                 <br><br>
                                 <strong>Warning: </strong>This application works best in a desktop view
+                                <br><br>
+                                <div class="options-container">
+                                    <h3>Accessability Options</h3>
+                                    <p class="font-weight-bold font-increase">
+                                        Set Font Size:
+                                    </p>
+                                    <button class="font-option btn btn-lg btn-link" style="font-size: 12px;" data-size="3">A</button>
+                                    <button class="font-option btn btn-lg btn-link" style="font-size: 18px;" data-size="6">A</button>
+                                    <button class="font-option btn btn-lg btn-link" style="font-size: 22px;" data-size="9">A</button>
+                                </div>
                             </p>
                         </div>
                         <div class="col-sm-3">
@@ -80,7 +92,7 @@
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
                     <a
-                        class="nav-link active"
+                        class="nav-link active font-increase"
                         id="order-tab"
                         data-toggle="tab"
                         href="#order"
@@ -93,7 +105,7 @@
                 </li>
                 <li class="nav-item">
                     <a
-                        class="nav-link"
+                        class="nav-link font-increase"
                         id="fact-tab"
                         data-toggle="tab"
                         href="#fact"
@@ -105,7 +117,7 @@
                     </a>
                 </li>
             </ul>
-            <div class="tab-content" id="myTabContent">
+            <div class="tab-content quiz-content" id="myTabContent">
                 <div
                     class="tab-pane fade show active"
                     id="order"
@@ -117,18 +129,18 @@
                     </button>
                     <strong>Top</strong>
                         <div id="sortQuiz">
-                            <div class="list-group-item">Main shoot</div>
-                            <div class="list-group-item">Leaves</div>
-                            <div class="list-group-item">Main root</div>
-                            <div class="list-group-item">Flower buds</div>
-                            <div class="list-group-item">Flower</div>
-                            <div class="list-group-item">The root</div>
-                            <div class="list-group-item">Leaf stalks</div>
-                            <div class="list-group-item">The stem</div>
-                            <div class="list-group-item">Small shoots</div>
+                            <div class="list-group-item font-increase">Main shoot</div>
+                            <div class="list-group-item font-increase">Leaves</div>
+                            <div class="list-group-item font-increase">Main root</div>
+                            <div class="list-group-item font-increase">Flower buds</div>
+                            <div class="list-group-item font-increase">Flower</div>
+                            <div class="list-group-item font-increase">The root</div>
+                            <div class="list-group-item font-increase">Leaf stalks</div>
+                            <div class="list-group-item font-increase">The stem</div>
+                            <div class="list-group-item font-increase">Small shoots</div>
                         </div>
                     <strong>Bottom</strong>
-                    <div id="quizAlert" class="alert alert-secondary" role="alert">
+                    <div id="quizAlert" class="alert alert-secondary font-increase" role="alert">
                         Press check to see if you got the order correct
                     </div>
                 </div>
@@ -145,7 +157,7 @@
                         <div class="col-sm-4">
                             <div class="text-item text-nine">
                                 <h3>Plant information</h3>
-                                <p class="audio-content-11">
+                                <p class="audio-content-11 font-increase">
                                     <button class="audio-btn float-right m-3" data-audio="11">
                                         <i class="fas fa-volume-up" aria-hidden="true"></i>
                                     </button>
@@ -167,7 +179,7 @@
                 <div class="col-sm-6 col-lg-4 d-flex flex-column">
                     <div class="text-item text-nine">
                         <h3>9 - Flower</h3>
-                        <p class="audio-content-2">
+                        <p class="audio-content-2 font-increase">
                             <button class="audio-btn float-right m-3" data-audio="2">
                                 <i class="fas fa-volume-up"></i>
                             </button>
@@ -178,7 +190,7 @@
                     </div>
                     <div class="text-item text-eight">
                         <h3>8 - Main shoot</h3>
-                        <p class="audio-content-3">
+                        <p class="audio-content-3 font-increase">
                             <button class="audio-btn float-right m-3" data-audio="3">
                                 <i class="fas fa-volume-up"></i>
                             </button>
@@ -189,7 +201,7 @@
                     </div>
                     <div class="text-item text-seven">
                         <h3>7 - Flower buds</h3>
-                        <p class="audio-content-4">
+                        <p class="audio-content-4 font-increase">
                             <button class="audio-btn float-right m-3" data-audio="4">
                                 <i class="fas fa-volume-up"></i>
                             </button>
@@ -200,7 +212,7 @@
                     </div>
                     <div class="text-item text-six">
                         <h3>6 - Leaves</h3>
-                        <p class="audio-content-5">
+                        <p class="audio-content-5 font-increase">
                             <button class="audio-btn float-right m-3" data-audio="5">
                                 <i class="fas fa-volume-up"></i>
                             </button>
@@ -213,7 +225,7 @@
                     </div>
                     <div class="text-item text-five">
                         <h3>5 - Leaf stalks</h3>
-                        <p class="audio-content-6">
+                        <p class="audio-content-6 font-increase">
                             <button class="audio-btn float-right m-3" data-audio="6">
                                 <i class="fas fa-volume-up"></i>
                             </button>
@@ -224,7 +236,7 @@
                     </div>
                     <div class="text-item text-four">
                         <h3>4 - The stem</h3>
-                        <p class="audio-content-7">
+                        <p class="audio-content-7 font-increase">
                             <button class="audio-btn float-right m-3" data-audio="7">
                                 <i class="fas fa-volume-up"></i>
                             </button>
@@ -235,7 +247,7 @@
                     </div>
                     <div class="text-item text-three">
                         <h3>3 - Small shoots</h3>
-                        <p class="audio-content-8">
+                        <p class="audio-content-8 font-increase">
                             <button class="audio-btn float-right m-3" data-audio="8">
                                 <i class="fas fa-volume-up"></i>
                             </button>
@@ -246,7 +258,7 @@
                     </div>
                     <div class="text-item text-two">
                         <h3>2 - The main root</h3>
-                        <p class="audio-content-9">
+                        <p class="audio-content-9 font-increase">
                             <button class="audio-btn float-right m-3" data-audio="9">
                                 <i class="fas fa-volume-up"></i>
                             </button>
@@ -257,7 +269,7 @@
                     </div>
                     <div class="text-item text-one">
                         <h3>1 - The root</h3>
-                        <p class="audio-content-10">
+                        <p class="audio-content-10 font-increase">
                             <button class="audio-btn float-right m-3" data-audio="10">
                                 <i class="fas fa-volume-up"></i>
                             </button>
