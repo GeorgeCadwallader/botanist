@@ -30,7 +30,7 @@
         <div class="container-fluid nav-top">
             <div class="row py-3 nav-top-row">
                 <div class="col-sm-4 col-lg-1 my-sm-2">
-                    <img src="./assets/images/logo.png" class="site-logo img-fluid">
+                    <img src="./assets/images/logo.png" class="site-logo img-fluid" alt="Botanist Logo">
                 </div>
                 <div class="col-sm-8 col-lg-8 my-sm-2 nav-top-title">
                     <a class="site-link" href="index.html">
@@ -40,7 +40,7 @@
                     </a>
                 </div>
                 <div class="col-sm-12 col-lg-3 my-sm-2 justify-right nav-top-author nav-top-title">
-                    <a href="https://www.behance.net/georgecadwall" class="site-link font-increase">
+                    <a href="https://www.linkedin.com/in/georgecadwallader/" class="site-link font-increase">
                         Made by George Cadwallader
                     </a>
                 </div>
@@ -81,7 +81,7 @@
                             </p>
                         </div>
                         <div class="col-sm-3">
-                            <img src="./assets/images/plant.png" class="img-fluid">
+                            <img src="./assets/images/plant.png" class="img-fluid" alt="Cartoon image of a plant">
                         </div>
                     </div>
                     <button id="start-btn" class="btn btn-lg btn-link">Start</button>
@@ -124,24 +124,40 @@
                     role="tabpanel"
                     aria-labelledby="order-tab"
                 >
-                    <button id="check-btn" class="btn btn-lg btn-link d-block">
+                    <div class="text-item">
+                        <h3>Ordering quiz</h3>
+                        <p class="audio-content-12 font-increase">
+                            <button class="audio-btn float-right m-3" data-audio="12">
+                                <i class="fas fa-volume-up" aria-hidden="true"></i>
+                            </button>
+                            Now you have learnt all about different parts of a plant, test how much you remember the order of the different parts mentioned.
+                            <br><br>
+                            Click and drag the items to order them into what you think is the correct order from bottom to top.
+                        </p>
+                    </div>
+                    <div class="my-3">
+                        <strong class="h3">Top</strong>
+                    </div>
+                    <div id="sortQuiz">
+                        <div class="list-group-item font-increase">Main shoot</div>
+                        <div class="list-group-item font-increase">Leaves</div>
+                        <div class="list-group-item font-increase">Main root</div>
+                        <div class="list-group-item font-increase">Flower buds</div>
+                        <div class="list-group-item font-increase">Flower</div>
+                        <div class="list-group-item font-increase">The root</div>
+                        <div class="list-group-item font-increase">Leaf stalks</div>
+                        <div class="list-group-item font-increase">The stem</div>
+                        <div class="list-group-item font-increase">Small shoots</div>
+                    </div>
+                    <div class="my-3">
+                        <strong class="h3">Bottom</strong>
+                    </div>
+                    <button id="check-btn" class="btn btn-lg btn-link d-block my-3">
                         Check
                     </button>
-                    <strong>Top</strong>
-                        <div id="sortQuiz">
-                            <div class="list-group-item font-increase">Main shoot</div>
-                            <div class="list-group-item font-increase">Leaves</div>
-                            <div class="list-group-item font-increase">Main root</div>
-                            <div class="list-group-item font-increase">Flower buds</div>
-                            <div class="list-group-item font-increase">Flower</div>
-                            <div class="list-group-item font-increase">The root</div>
-                            <div class="list-group-item font-increase">Leaf stalks</div>
-                            <div class="list-group-item font-increase">The stem</div>
-                            <div class="list-group-item font-increase">Small shoots</div>
-                        </div>
-                    <strong>Bottom</strong>
-                    <div id="quizAlert" class="alert alert-secondary font-increase" role="alert">
-                        Press check to see if you got the order correct
+                    <div id="quizAlert" class="alert alert-secondary font-increase mt-3" role="alert">
+                        Once you think you have got the order correct press check to see if
+                        you are correct!
                     </div>
                 </div>
                 <div

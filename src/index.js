@@ -4,6 +4,38 @@ import Chart from 'chart.js';
 
 $(document).ready(function() {
 
+    var clicked = false, clickY;
+    $(document).on({
+        'mousemove': function(e) {
+            if ($(e.target).is('#sortQuiz') || $(e.target).parents('#sortQuiz').length > 0) {
+                return;
+            }
+
+            clicked && updateScrollPos(e);
+        },
+        'mousedown': function(e) {
+            if ($(e.target).is('#sortQuiz') || $(e.target).parents('#sortQuiz').length > 0) {
+                return;
+            }
+            if ($(e.target).hasClass('image-container') || $(e.target).parents('.image-container').length > 0) {
+                let climbing = $('#climbing')[0];
+                climbing.volume = 0.3;
+                climbing.play();
+            }
+            clicked = true;
+            clickY = e.pageY;
+        },
+        'mouseup': function() {
+            clicked = false;
+            $('html').css('cursor', 'auto');
+        }
+    });
+
+    var updateScrollPos = function(e) {
+        $('html').css('cursor', 'grab');
+        $(window).scrollTop($(window).scrollTop() + (clickY - e.pageY));
+    }
+
     var popularChart = new Chart(document.getElementById('popularChart'), {
         type: 'bar',
         data: {

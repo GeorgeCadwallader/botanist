@@ -9,6 +9,10 @@ body {
     height: 2000px;
 }
 
+#start-btn {
+    font-size: 24px;
+}
+
 .nav-top {
     background-color: #51a33e;
     z-index: 999;
@@ -67,6 +71,14 @@ body {
 .quiz-section {
     margin-top: 100px;
     margin-bottom: 250px;
+}
+
+.nav-link {
+    color: #51a33e;
+}
+
+.nav-link:hover {
+    color: #478f36;
 }
 
 .info-con {
